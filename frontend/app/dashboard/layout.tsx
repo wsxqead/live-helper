@@ -1,0 +1,20 @@
+// app/dashboard/layout.tsx
+import DashboardSidebar from "@/components/dashboard/DashboardSidebar";
+import DashboardHeader from "@/components/dashboard/DashboardHeader";
+
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="min-h-screen bg-slate-50 flex">
+      <DashboardSidebar />
+
+      <div className="flex-1 flex flex-col">
+        <DashboardHeader />
+        <main className="p-6">{children}</main>
+      </div>
+    </div>
+  );
+}
